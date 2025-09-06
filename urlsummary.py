@@ -32,7 +32,7 @@ def generate_content(prompt):
     :param prompt: The text prompt to generate content for.
     :return: The generated text or an error message if the request fails.
     """
-    url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=AIzaSyCfxbTipwSDhpPJyLMyE7zAZ5FajzFoRf8'
+    url = 'https://generativelanguage.googleapis.com/v1beta/models/gemini-1.5-flash-latest:generateContent?key=[[Your Google API KEY]]'
     headers = {'Content-Type': 'application/json'}
     data = {
         "contents": [
@@ -127,4 +127,5 @@ def process_url():
     return jsonify({"english_summary": summary, "translated_summary": translated})
 
 if __name__ == '__main__':
+
     app.run(debug=True)
